@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Rudra Electricals | Solar Panels, Batteries, Inverters</title>
+  <meta name="description" content="Browse solar panels, batteries, inverters and installation packages from Adani, Waaree, Tata and Havells at best prices in Bilaspur, Chhattisgarh." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark':    '#0F1117',
+            'brand-section': '#1C1F2E',
+            'brand-yellow':  '#EAB308',
+            'brand-amber':   '#F59E0B',
+            'brand-green':   '#27AE60',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-white bg-brand-dark">
+
+<!-- NAVBAR -->
+<nav class="bg-brand-dark border-b border-white/10 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Rudra Electricals" class="h-10 w-auto" onerror="this.style.display='none'" />
+        <div>
+          <span class="text-white font-bold text-lg leading-tight block">RUDRA ELECTRICALS</span>
+          <span class="text-brand-yellow text-[8px] tracking-wide leading-tight hidden lg:block">SOLAR SOLUTION · ELECTRICAL WORKS · SERVICE &amp; MAINTENANCE</span>
+          <span class="text-brand-yellow text-[8px] tracking-wide leading-tight lg:hidden">SOLAR · ELECTRICAL · SERVICE</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html"    class="nav-link text-gray-300 hover:text-brand-yellow transition text-sm font-medium pb-1">Home</a>
+        <a href="products.html" class="nav-link active text-gray-300 hover:text-brand-yellow transition text-sm font-medium pb-1">Products</a>
+        <a href="about.html"    class="nav-link text-gray-300 hover:text-brand-yellow transition text-sm font-medium pb-1">About Us</a>
+        <a href="contact.html"  class="nav-link text-gray-300 hover:text-brand-yellow transition text-sm font-medium pb-1">Contact</a>
+        <a href="contact.html#contact-form"  class="ml-4 btn-yellow px-5 py-2 rounded-full text-sm transition">Get Free Quote ⚡</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-brand-dark border-t border-white/10 pb-4">
+    <a href="index.html"    class="nav-link block px-6 py-3 text-gray-300 hover:text-brand-yellow text-sm">Home</a>
+    <a href="products.html" class="nav-link block px-6 py-3 text-gray-300 hover:text-brand-yellow text-sm">Products</a>
+    <a href="about.html"    class="nav-link block px-6 py-3 text-gray-300 hover:text-brand-yellow text-sm">About Us</a>
+    <a href="contact.html"  class="nav-link block px-6 py-3 text-gray-300 hover:text-brand-yellow text-sm">Contact</a>
+    <a href="contact.html#contact-form"  class="mx-6 mt-3 block text-center btn-yellow px-5 py-2 rounded-full text-sm">Get Free Quote ⚡</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="bg-brand-section py-16 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl lg:text-5xl font-extrabold text-white mb-3">Our Products</h1>
+    <p class="text-gray-400 text-lg mb-2">Premium solar products from Adani, Waaree, Tata &amp; Havells</p>
+    <p class="text-brand-yellow text-sm">सर्वश्रेष्ठ ब्रांड्स, सर्वोत्तम मूल्य — Best Brands, Best Price</p>
+  </div>
+</section>
+
+<!-- CATEGORY FILTER -->
+<section class="bg-brand-dark border-b border-white/10 py-5 sticky top-16 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap gap-3 justify-center">
+      <button class="filter-tab active text-sm font-semibold px-5 py-2 rounded-full border border-white/20 transition" data-category="all">All Products</button>
+      <button class="filter-tab text-sm font-semibold px-5 py-2 rounded-full border border-white/20 text-gray-300 hover:border-brand-yellow hover:text-brand-yellow transition" data-category="panel">Solar Panels</button>
+      <button class="filter-tab text-sm font-semibold px-5 py-2 rounded-full border border-white/20 text-gray-300 hover:border-brand-yellow hover:text-brand-yellow transition" data-category="battery">Batteries</button>
+      <button class="filter-tab text-sm font-semibold px-5 py-2 rounded-full border border-white/20 text-gray-300 hover:border-brand-yellow hover:text-brand-yellow transition" data-category="inverter">Inverters</button>
+      <button class="filter-tab text-sm font-semibold px-5 py-2 rounded-full border border-white/20 text-gray-300 hover:border-brand-yellow hover:text-brand-yellow transition" data-category="installation">Installation</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT GRID -->
+<section class="py-14 bg-brand-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="panel">
+        <div class="bg-gradient-to-br from-blue-900/70 to-blue-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">☀</span>
+          <span class="text-xs text-blue-300 font-semibold uppercase tracking-wider">Adani Solar / Waaree</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-panel text-xs font-semibold px-2 py-1 rounded-full mb-2">Solar Panel</span>
+          <h3 class="font-bold text-white mb-1">SunPower 330W Mono Panel</h3>
+          <p class="text-gray-400 text-sm mb-1">High-efficiency monocrystalline</p>
+          <p class="text-xs text-gray-500 mb-3">Wattage: 330W | Warranty: 25 years</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹9,500</span>
+            <a href="contact.html?product=SunPower+330W" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="panel">
+        <div class="bg-gradient-to-br from-sky-900/70 to-sky-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">🌤</span>
+          <span class="text-xs text-sky-300 font-semibold uppercase tracking-wider">Waaree / Tata Power</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-panel text-xs font-semibold px-2 py-1 rounded-full mb-2">Solar Panel</span>
+          <h3 class="font-bold text-white mb-1">PolyStar 250W Panel</h3>
+          <p class="text-gray-400 text-sm mb-1">Economical polycrystalline panel</p>
+          <p class="text-xs text-gray-500 mb-3">Wattage: 250W | Warranty: 25 years</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹7,200</span>
+            <a href="contact.html?product=PolyStar+250W" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="battery">
+        <div class="bg-gradient-to-br from-green-900/70 to-green-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">🔋</span>
+          <span class="text-xs text-green-300 font-semibold uppercase tracking-wider">Luminous</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-battery text-xs font-semibold px-2 py-1 rounded-full mb-2">Battery</span>
+          <h3 class="font-bold text-white mb-1">Luminous 150Ah Tubular Battery</h3>
+          <p class="text-gray-400 text-sm mb-1">Long backup, ideal for 1kW systems</p>
+          <p class="text-xs text-gray-500 mb-3">Capacity: 150Ah | Warranty: 3 years</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹12,800</span>
+            <a href="contact.html?product=Luminous+150Ah" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="battery">
+        <div class="bg-gradient-to-br from-emerald-900/70 to-emerald-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">⚡</span>
+          <span class="text-xs text-emerald-300 font-semibold uppercase tracking-wider">Exide</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-battery text-xs font-semibold px-2 py-1 rounded-full mb-2">Battery</span>
+          <h3 class="font-bold text-white mb-1">Exide 100Ah Solar Battery</h3>
+          <p class="text-gray-400 text-sm mb-1">Maintenance-free, deep-cycle design</p>
+          <p class="text-xs text-gray-500 mb-3">Capacity: 100Ah | Warranty: 2 years</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹9,000</span>
+            <a href="contact.html?product=Exide+100Ah" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="inverter">
+        <div class="bg-gradient-to-br from-yellow-900/70 to-yellow-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">🔌</span>
+          <span class="text-xs text-yellow-300 font-semibold uppercase tracking-wider">Microtek</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-inverter text-xs font-semibold px-2 py-1 rounded-full mb-2">Inverter</span>
+          <h3 class="font-bold text-white mb-1">Microtek 1kVA Solar Inverter</h3>
+          <p class="text-gray-400 text-sm mb-1">Pure sine wave, supports 800W load</p>
+          <p class="text-xs text-gray-500 mb-3">Capacity: 1kVA | Warranty: 2 years</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹5,500</span>
+            <a href="contact.html?product=Microtek+1kVA" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="inverter">
+        <div class="bg-gradient-to-br from-amber-900/70 to-amber-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">💡</span>
+          <span class="text-xs text-amber-300 font-semibold uppercase tracking-wider">Su-Kam</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-inverter text-xs font-semibold px-2 py-1 rounded-full mb-2">Inverter</span>
+          <h3 class="font-bold text-white mb-1">Su-Kam Fusion 2kVA Inverter</h3>
+          <p class="text-gray-400 text-sm mb-1">Smart grid-tie inverter with display</p>
+          <p class="text-xs text-gray-500 mb-3">Capacity: 2kVA | Warranty: 2 years</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹11,000</span>
+            <a href="contact.html?product=Su-Kam+2kVA" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="installation">
+        <div class="bg-gradient-to-br from-orange-900/70 to-orange-800/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">🏠</span>
+          <span class="text-xs text-orange-300 font-semibold uppercase tracking-wider">Turnkey Package</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-install text-xs font-semibold px-2 py-1 rounded-full mb-2">Installation</span>
+          <h3 class="font-bold text-white mb-1">Rooftop Installation — 1kW</h3>
+          <p class="text-gray-400 text-sm mb-1">Complete turnkey 1kW rooftop setup</p>
+          <p class="text-xs text-gray-500 mb-3">Panel + Inverter + Battery + Install</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹35,000</span>
+            <a href="contact.html?product=1kW+Installation" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card glass-card rounded-2xl overflow-hidden" data-category="installation">
+        <div class="bg-gradient-to-br from-red-900/70 to-orange-900/40 h-48 flex flex-col items-center justify-center gap-2">
+          <span class="text-5xl">🏗</span>
+          <span class="text-xs text-orange-300 font-semibold uppercase tracking-wider">Premium Package</span>
+        </div>
+        <div class="p-5">
+          <span class="inline-block badge-install text-xs font-semibold px-2 py-1 rounded-full mb-2">Installation</span>
+          <h3 class="font-bold text-white mb-1">Rooftop Installation — 3kW</h3>
+          <p class="text-gray-400 text-sm mb-1">Full 3kW system with batteries</p>
+          <p class="text-xs text-gray-500 mb-3">3kW Panels + Inverter + 2 Batteries + AMC</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-yellow font-bold text-xl">₹95,000</span>
+            <a href="contact.html?product=3kW+Installation" class="btn-yellow px-4 py-2 rounded-full text-xs transition">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Subsidy note -->
+    <div class="mt-12 glass-card border-brand-yellow/30 rounded-2xl p-6 text-center reveal">
+      <p class="text-white font-semibold text-lg mb-1">🏛 All prices shown are before government subsidy</p>
+      <p class="text-gray-400 text-sm">Get up to <strong class="text-brand-yellow">₹1,08,000</strong> subsidy under PM Surya Ghar Yojana. We assist with the entire application — free of charge.</p>
+      <a href="contact.html" class="inline-block mt-5 btn-yellow px-8 py-3 rounded-full transition shadow-lg shadow-yellow-500/20">Check My Subsidy →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="bg-brand-section py-14 text-center border-t border-white/10">
+  <h2 class="text-2xl font-extrabold text-white mb-3">Not sure which system is right for you?</h2>
+  <p class="text-gray-400 mb-6">Get a FREE site survey and personalized recommendation from our expert team</p>
+  <div class="flex flex-wrap justify-center gap-4">
+    <a href="contact.html" class="btn-yellow px-8 py-3 rounded-full transition shadow-lg shadow-yellow-500/20">Book Free Survey</a>
+    <a href="tel:9340232490" class="btn-outline-light font-bold px-8 py-3 rounded-full transition">📞 9340232490</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#0A0D14] text-gray-400 pt-10 pb-6 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      <div class="col-span-2 md:col-span-1">
+        <div class="text-white font-extrabold text-lg mb-1">RUDRA ELECTRICALS</div>
+        <p class="text-gray-500 text-xs mb-2">Solar Solution | Electrical Works | Service &amp; Maintenance</p>
+        <p class="text-brand-yellow/70 text-xs font-bold uppercase tracking-wide mb-2">Powering Your Future with Trust &amp; Excellence</p>
+        <p class="text-brand-yellow text-xs">सूरज की ऊर्जा, हर घर की रोशनी</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Quick Links</h4>
+        <ul class="space-y-1 text-xs">
+          <li><a href="index.html"    class="hover:text-brand-yellow transition">Home</a></li>
+          <li><a href="products.html" class="hover:text-brand-yellow transition">Products</a></li>
+          <li><a href="about.html"    class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="contact.html"  class="hover:text-brand-yellow transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Contact</h4>
+        <div class="space-y-1 text-xs">
+          <div>📞 <a href="tel:9340232490" class="hover:text-brand-yellow">9340232490</a></div>
+          <div>📞 <a href="tel:6263832490" class="hover:text-brand-yellow">6263832490</a></div>
+          <div>📧 <a href="mailto:info@rudraelectricals.in" class="hover:text-brand-yellow">info@rudraelectricals.in</a></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Serving Areas</h4>
+        <div class="text-xs text-gray-500 space-y-1">
+          <div>📍 Bilaspur (Main)</div><div>📍 Champa</div><div>📍 Mungeli</div><div>📍 Korba</div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-4 text-center text-xs text-gray-600">&copy; 2026 Rudra Electricals. All rights reserved.</div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">↑</button>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx serve *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(Copy-Item \"C:\\\\AIGenXLab\\\\Projects\\\\Rudra-Electricals-Solar\\\\RudraElectricalsSolarProject\\\\static\\\\admin\\\\config.yml\" \"C:\\\\AIGenXLab\\\\Projects\\\\Rudra-Electricals-Solar\\\\RudraElectricalsSolarProject\\\\admin\\\\config.yml\")"
+    ]
+  }
+}

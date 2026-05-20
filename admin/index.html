@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudra Electricals — Admin Panel</title>
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Decap CMS with manual init to set config path explicitly -->
+  <script>window.CMS_MANUAL_INIT = true</script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: { name: 'test-repo' },
+        media_folder: 'images/uploads',
+        public_folder: '/images/uploads',
+        collections: [
+          {
+            name: 'products',
+            label: 'Products',
+            folder: '_data/products',
+            create: true,
+            slug: '{{slug}}',
+            identifier_field: 'name',
+            fields: [
+              { label: 'Product Name',      name: 'name',       widget: 'string' },
+              { label: 'Category',          name: 'category',   widget: 'select',
+                options: ['Solar Panel', 'Battery', 'Inverter', 'Installation'] },
+              { label: 'Price (₹)',          name: 'price',      widget: 'number' },
+              { label: 'Short Description', name: 'short_desc', widget: 'string' },
+              { label: 'Full Description',  name: 'full_desc',  widget: 'markdown', required: false },
+              { label: 'Main Image',        name: 'image',      widget: 'image',    required: false },
+              { label: 'Wattage / Capacity',name: 'capacity',   widget: 'string',   required: false },
+              { label: 'Warranty',          name: 'warranty',   widget: 'string',   required: false },
+              { label: 'Featured on Home?', name: 'featured',   widget: 'boolean',  default: false },
+              { label: 'Sort Order',        name: 'sort_order', widget: 'number',   default: 99 },
+            ]
+          },
+          {
+            name: 'hero',
+            label: 'Hero Banner',
+            files: [{
+              name: 'hero',
+              label: 'Home Page Hero Banner',
+              file: '_data/hero.json',
+              fields: [
+                { label: 'Headline',         name: 'headline',    widget: 'string' },
+                { label: 'Sub-headline',     name: 'subheadline', widget: 'string' },
+                { label: 'CTA Button Text',  name: 'cta_text',    widget: 'string', default: 'Get Free Quote' },
+                { label: 'CTA Button Link',  name: 'cta_link',    widget: 'string', default: '/contact' },
+                { label: 'Background Image', name: 'bg_image',    widget: 'image',  required: false },
+              ]
+            }]
+          },
+          {
+            name: 'testimonials',
+            label: 'Testimonials',
+            folder: '_data/testimonials',
+            create: true,
+            slug: '{{slug}}',
+            identifier_field: 'customer_name',
+            fields: [
+              { label: 'Customer Name', name: 'customer_name', widget: 'string' },
+              { label: 'Location',      name: 'location',      widget: 'string' },
+              { label: 'Review Text',   name: 'review',        widget: 'text' },
+              { label: 'Star Rating',   name: 'rating',        widget: 'number', value_type: 'int', min: 1, max: 5, default: 5 },
+              { label: 'Photo',         name: 'photo',         widget: 'image',  required: false },
+              { label: 'Date',          name: 'date',          widget: 'string' },
+            ]
+          },
+          {
+            name: 'offers',
+            label: 'Offers & Promotions',
+            files: [{
+              name: 'offers',
+              label: 'Current Offers',
+              file: '_data/offers.json',
+              fields: [{
+                label: 'Offers', name: 'offers', widget: 'list',
+                fields: [
+                  { label: 'Title',       name: 'title',       widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
+                  { label: 'Valid Until', name: 'valid_until', widget: 'string' },
+                  { label: 'Badge Color', name: 'badge_color', widget: 'select',
+                    options: ['orange', 'green', 'red', 'blue'] },
+                  { label: 'Active?',     name: 'active',      widget: 'boolean', default: true },
+                ]
+              }]
+            }]
+          },
+          {
+            name: 'faqs',
+            label: 'FAQs',
+            files: [{
+              name: 'faqs',
+              label: 'Frequently Asked Questions',
+              file: '_data/faqs.json',
+              fields: [{
+                label: 'FAQs', name: 'faqs', widget: 'list',
+                fields: [
+                  { label: 'Question', name: 'question', widget: 'string' },
+                  { label: 'Answer',   name: 'answer',   widget: 'markdown' },
+                ]
+              }]
+            }]
+          },
+          {
+            name: 'settings',
+            label: 'Site Settings (Contact Info)',
+            files: [{
+              name: 'settings',
+              label: 'Business Contact Details',
+              file: '_data/settings.json',
+              fields: [
+                { label: 'Business Name',            name: 'business_name', widget: 'string', default: 'Rudra Electricals' },
+                { label: 'Phone 1',                  name: 'phone1',        widget: 'string' },
+                { label: 'Phone 2 (WhatsApp)',        name: 'phone2',        widget: 'string' },
+                { label: 'Email',                    name: 'email',         widget: 'string' },
+                { label: 'Address Line 1',           name: 'address1',      widget: 'string' },
+                { label: 'City, State',              name: 'address2',      widget: 'string' },
+                { label: 'Google Maps Embed URL',    name: 'maps_url',      widget: 'string', required: false },
+                { label: 'Working Hours',            name: 'working_hours', widget: 'string', default: 'Mon–Sat: 9:00 AM – 7:00 PM' },
+                { label: 'Facebook URL',             name: 'facebook',      widget: 'string', required: false },
+                { label: 'Instagram URL',            name: 'instagram',     widget: 'string', required: false },
+                { label: 'YouTube URL',              name: 'youtube',       widget: 'string', required: false },
+              ]
+            }]
+          },
+        ]
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* Rudra Electricals — Dark Cinematic Theme (Sample 1 style) */
+
+/* Base */
+html { scroll-behavior: smooth; }
+body { background-color: #0F1117; }
+
+/* Navbar active link */
+.nav-link.active { color: #EAB308; border-bottom: 2px solid #EAB308; }
+
+/* Hero gradient overlay — dark cinematic */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 60%, rgba(0,0,0,0.20) 100%);
+}
+
+/* Subsidy badge pulse — yellow glow */
+@keyframes pulse-badge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(234,179,8,0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(234,179,8,0); }
+}
+.subsidy-badge { animation: pulse-badge 2s infinite; }
+
+/* Brand logo grayscale → color on hover */
+.brand-logo { filter: grayscale(100%); opacity: 0.5; transition: all 0.3s ease; }
+.brand-logo:hover { filter: grayscale(0%); opacity: 1; }
+
+/* Product card hover lift */
+.product-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+
+/* FAQ accordion chevron */
+.faq-btn[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+.faq-chevron { transition: transform 0.25s ease; }
+
+/* Stats strip */
+.stats-strip {
+  background: linear-gradient(90deg, #0F1117 0%, #1C1F2E 50%, #0F1117 100%);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* PM Surya Ghar section — dark with yellow accent */
+.surya-ghar-bg {
+  background: linear-gradient(135deg, #1C1F2E 0%, #0F1117 100%);
+  border-left: 4px solid #EAB308;
+}
+
+/* WhatsApp button */
+.whatsapp-btn { background-color: #25D366; }
+.whatsapp-btn:hover { background-color: #1ebe57; }
+
+/* Category filter active tab */
+.filter-tab.active {
+  background-color: #EAB308;
+  color: #0F1117;
+  border-color: #EAB308;
+  font-weight: 700;
+}
+
+/* Form field error */
+.field-error { border-color: #ef4444 !important; }
+.error-msg { color: #ef4444; font-size: 0.78rem; margin-top: 2px; }
+
+/* Success banner */
+#form-success { display: none; }
+#form-success.show { display: flex; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Mobile menu */
+#mobile-menu { display: none; }
+#mobile-menu.open { display: block; }
+
+/* Step connector */
+.step-connector {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #EAB308, #F59E0B);
+}
+
+/* Stars */
+.star-filled { color: #EAB308; }
+
+/* Footer links */
+footer a:hover { color: #EAB308; }
+
+/* ── Glassmorphism card (dark) ─────────────────────────────────────── */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(234,179,8,0.30);
+}
+
+/* ── Hero floating info card ──────────────────────────────────────── */
+.hero-float-card {
+  background: rgba(28,31,46,0.90);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: border-color 0.25s ease;
+}
+.hero-float-card:hover { border-color: rgba(234,179,8,0.40); }
+
+/* ── Dark form input ──────────────────────────────────────────────── */
+.dark-input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  transition: border-color 0.2s ease;
+}
+.dark-input::placeholder { color: rgba(255,255,255,0.35); }
+.dark-input:focus { outline: none; border-color: #EAB308; }
+.dark-input option { background-color: #1C1F2E; color: #ffffff; }
+
+/* ── Yellow CTA button ────────────────────────────────────────────── */
+.btn-yellow {
+  background-color: #EAB308;
+  color: #0F1117;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.btn-yellow:hover { background-color: #ca9e04; }
+.btn-yellow:active { transform: scale(0.98); }
+
+/* ── Outline button (dark theme) ──────────────────────────────────── */
+.btn-outline-light {
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline-light:hover { border-color: #EAB308; color: #EAB308; }
+
+/* ── Back-to-top button ───────────────────────────────────────────── */
+#back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem;
+  width: 44px; height: 44px;
+  background: #EAB308; color: #0F1117;
+  border-radius: 50%; border: none;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; font-weight: 700; cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 99;
+}
+#back-to-top.visible { opacity: 1; pointer-events: auto; }
+#back-to-top:hover { transform: translateY(-3px); }
+
+/* ── Product category badge colors (dark bg aware) ───────────────── */
+.badge-panel    { background: rgba(59,130,246,0.15); color: #93c5fd; }
+.badge-battery  { background: rgba(34,197,94,0.15);  color: #86efac; }
+.badge-inverter { background: rgba(234,179,8,0.15);  color: #fde68a; }
+.badge-install  { background: rgba(249,115,22,0.15); color: #fdba74; }

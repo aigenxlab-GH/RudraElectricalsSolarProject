@@ -1,0 +1,25 @@
+{
+  "offers": [
+    {
+      "title": "Summer Solar Sale",
+      "description": "Up to 15% OFF on all solar panel packages this season",
+      "valid_until": "31 August 2026",
+      "badge_color": "orange",
+      "active": true
+    },
+    {
+      "title": "FREE Site Survey",
+      "description": "Free site survey worth ₹500 for all new enquiries this month",
+      "valid_until": "31 August 2026",
+      "badge_color": "green",
+      "active": true
+    },
+    {
+      "title": "0% Interest EMI",
+      "description": "EMI available at 0% interest via our partner bank — बैंक लोन की सुविधा उपलब्ध",
+      "valid_until": "31 December 2026",
+      "badge_color": "blue",
+      "active": true
+    }
+  ]
+}
