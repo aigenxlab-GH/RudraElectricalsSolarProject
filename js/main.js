@@ -67,22 +67,11 @@ if (contactForm) {
 
     if (!valid) return;
 
-    // Submit via fetch to Netlify Forms (must use URL-encoded, not FormData)
-    const data = new URLSearchParams(new FormData(contactForm)).toString();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: data
-    })
-      .then(() => {
-        contactForm.reset();
-        const success = document.getElementById('form-success');
-        if (success) success.classList.add('show');
-        setTimeout(() => success && success.classList.remove('show'), 6000);
-      })
-      .catch(() => {
-        alert('Something went wrong. Please call us directly at 9340232490.');
-      });
+    // Demo mode — show success message without submitting anywhere
+    contactForm.reset();
+    const success = document.getElementById('form-success');
+    if (success) success.classList.add('show');
+    setTimeout(() => success && success.classList.remove('show'), 6000);
   });
 
   // Clear error on input

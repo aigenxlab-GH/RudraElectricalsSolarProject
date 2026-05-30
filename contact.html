@@ -99,12 +99,7 @@
           </div>
         </div>
 
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
-          <input type="hidden" name="form-name" value="contact" />
-          <!-- Honeypot -->
-          <div style="display:none">
-            <input name="bot-field" />
-          </div>
+        <form id="contact-form" novalidate>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <!-- Full Name -->
@@ -326,18 +321,5 @@
   })();
 </script>
 
-<!-- Netlify Identity — redirect to /admin/ after login -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user) {
-      if (!user) {
-        window.netlifyIdentity.on("login", function() {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
